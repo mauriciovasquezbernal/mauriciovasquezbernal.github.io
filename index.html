@@ -122,7 +122,7 @@
 
                     <!-- PROFILE PICTURE -->
                     <div id="profile" class="right">
-                        <!--mg alt="profile-image" class="img-responsive" src="images/profile/fake-profile.jpg"-->
+                        <mg alt="profile-image" class="img-responsive" src="images/profile/profile.png">
                         <div class="slant"></div>
 
                         <!--EMPTY PLUS BUTTON-->
@@ -214,21 +214,15 @@
                     <div class="card-content">
                         <!-- ABOUT PARAGRAPH -->
                         <p>
-                            Hello! I’m Mauricio Vásquez Bernal, a software engineer at <a href="#kinvolk">Kinvolk</a>.
-                            Currently, I participate in the development of OpenTelemetry, a distributed tracing and metrics system.
+                            Hello! I’m Mauricio Vásquez Bernal, a principal software engineer part of the Kinvolk team at <a href="#microsoft">Microsoft</a>.
+                            Currently, I'm one of the main developers of Inspektor Gadget, a collection of tools to debug and
+                            introspect Kubernetes applications and resources. Before joining Microsoft, I was part of
+                            <a href="#kinvolk">Kinvolk</a>, there I participated in the development of projects like OpenTelemetry.
 
-                            In the past worked as a research assistant at the Polytechnic University of Turin, Italy, there
-                            I worked implementing high performance network function with eBPF (extended Berkley Packet Filter)
-                            and XDP (eXpress Data Path) technologies.
+                            I'm interested in eBPF, tracing, monitoring and networking technologies. I've given talks at different technical
+                            conferences like Kubecon, Open Source Summit, eBPF summit, etc.
 
-                            I was one of the main developers of <a href="#polycube">Polycube</a>, an open source software framework that provides fast
-                            and lightweight network functions.
-
-                            I got a BS.c in Eletronic Engineering at University of Antioquia, Colombia and then I got a MS.c
-                            in Computer Engineering from Polytechnic University of Turin in 2015.
-
-                            Besides my work, I am an amateur MTB and road cyclist, I enjoy participating in amateur races, even though
-                            I haven't got any impressive results yet.
+                            Besides my job, I am an amateur MTB and road cyclist, I enjoy participating in amateur races.
                         </p>
                     </div>
 
@@ -259,6 +253,37 @@
         </div>
 
         <div id="timeline-experience">
+            <!-- Microsoft -->
+            <div id="microsoft" class="timeline-block">
+                <!-- DOT -->
+                <div class="timeline-dot"></div>
+                <!-- TIMELINE CONTENT -->
+                <div class="card timeline-content">
+                    <div class="card-content">
+                        <!-- TIMELINE TITLE -->
+                        <h6 class="timeline-title">Principal Software Engineer</h6>
+                        <!-- TIMELINE TITLE INFO -->
+                        <div class="timeline-info">
+                            <h6>
+                                <small><a href="https://microsoft.com/">Microsoft</a></small>
+                            </h6>
+                            <h6>
+                                <small>June 2021 - Present</small>
+                            </h6>
+                        </div>
+                        <!-- TIMELINE PARAGRAPH -->
+                        <p>
+                            I'm part of the Kinvolk team of the Azure organization in Microsoft.
+                            My mains responsabilities are the development of the <a href="#inspektor-gadget">Inspektor Gadget</a>
+                            project and its integration with different Microsoft internal systems.
+                        </p>
+                        <!-- BUTTON TRIGGER MODAL -->
+                        <!--a href="#" class="modal-dot" data-toggle="modal" data-target="#myModal-4">
+                            <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                        </a-->
+                    </div>
+                </div>
+            </div>
 
             <!-- Kinvolk -->
             <div id="kinvolk" class="timeline-block">
@@ -268,7 +293,7 @@
                 <div class="card timeline-content">
                     <div class="card-content">
                         <!-- TIMELINE TITLE -->
-                        <h6 class="timeline-title">Software Engineer</h6>
+                        <h6 class="timeline-title">Senior Software Engineer</h6>
                         <!-- TIMELINE TITLE INFO -->
                         <div class="timeline-info">
                             <h6>
@@ -280,9 +305,9 @@
                         </div>
                         <!-- TIMELINE PARAGRAPH -->
                         <p>
-                            I work as a software engineer at Kinvolk. I work remotely from my home city, Medellín - Colombia.
+                            I worked as a software engineer at Kinvolk. I worked remotely from my home city, Medellín - Colombia.
 
-                            Currently I focus in the development of OpenTelemetry, a distributed tracing framework and Lokomotive, a Kubernestes distribution by Kinvolk.
+                            My main focus was the development of OpenTelemetry, a distributed tracing framework and Lokomotive, a Kubernestes distribution by Kinvolk.
                         </p>
                         <!-- BUTTON TRIGGER MODAL -->
                         <!--a href="#" class="modal-dot" data-toggle="modal" data-target="#myModal-4">
@@ -560,6 +585,94 @@
 </section>
 
 <!--==========================================
+                   PROJECTS
+===========================================-->
+<section id="projects" class="section">
+    <div class="container">
+        <div class="section-title">
+            <h4 class="text-uppercase text-center"><img src="images/icons/brick.png" alt="demo">Projects</h4>
+        </div>
+
+        <div id="inspektor-gadget" class="card timeline-content">
+            <div class="card-content">
+                <!-- TIMELINE TITLE -->
+                <h6 class="timeline-title" align="center">Inspektor Gadget</h6>
+                <p>
+                    <a href="https://inspektor-gadget.io/">Inspektor Gadget</a> is a collection of eBPF-based gadgets to
+                    debug and inspect Kubernetes apps and resources.
+
+                    I'm one of the main developers and the tech lead of the project.
+                </p>
+            </div>
+        </div>
+
+        <div id="opentelemetry" class="card timeline-content">
+            <div class="card-content">
+                <!-- TIMELINE TITLE -->
+                <h6 class="timeline-title" align="center">OpenTelemetry</h6>
+                <p>
+                    <a href="https://opentelemetry.io/">OpenTelemetry</a> is a collection of tools, APIs, and SDKs.
+                    Use it to instrument, generate, collect, and export telemetry data (metrics, logs, and traces)
+                    to help you analyze your software’s performance and behavior.
+
+                    I mainly contributed to the <a href="https://github.com/open-telemetry/opentelemetry-python">OpenTelemetry-Python</a>.
+                </p>
+            </div>
+        </div>
+
+        <div id="polycube" class="card timeline-content">
+            <div class="card-content">
+                <!-- TIMELINE TITLE -->
+                <h6 class="timeline-title" align="center">Polycube</h6>
+                <p>
+                    <a href="https://github.com/polycube-network/polycube/">Polycube</a> is an open source
+                    software framework that provides fast and lightweight network functions such as bridges,
+                    routers, firewalls, and others implemented using eBPF and XDP Linux kernel technologies.
+                    On top of Polycube we built pcn-iptables, a much more efficient clone of iptables, and pcn-k8s,
+                    a network provider for kubernetes.
+                </p>
+            </div>
+        </div>
+
+        <div id="iovisor-ovn" class="card timeline-content">
+            <div class="card-content">
+                <!-- TIMELINE TITLE -->
+                <h6 class="timeline-title" align="center">IOvisor-ovn</h6>
+                <p>
+                    <a href="https://github.com/iovisor/iovisor-ovn">IOvisor-ovn</a> was an experimental
+                    project that implemented the datapth for the <a href="https://github.com/openvswitch/ovs/">Open Virtual Networking (OVN)</a>
+                    using eBPF.
+                    We built a daemon that read info from the OVN North and SouthBound databases, and based
+                    on that a service topology that used eBPF in the datapath was deployed in the different servers
+                    to provide networking for different hypervisors.
+                </p>
+            </div>
+        </div>
+
+        <div class="card timeline-content">
+            <div class="card-content">
+                <!-- TIMELINE TITLE -->
+                <h6 class="timeline-title" align="center">Squadra Corse</h6>
+                <p>
+                    <a href="https://www.facebook.com/pg/SCPolito/" target="_blank">Squadra Corse</a> is the student racing team from the Polytechnic University of Turin.
+                    Each year a group of students for the different faculties design and build an
+                    electric car to compete against another university teams from all the world at
+                    the <a href="https://en.wikipedia.org/wiki/Formula_SAE" target="_blank">Formula SAE</a>.
+                    I was part of the electronics and control system division, specifically I was the lead
+                    of the team that built a telemetry system for the car.
+                </p>
+                <!--p>
+                    This is a photo of the SCXV presentation:
+                </p-->
+                <!--img src="images/other/squadra_corse.jpg" class="center"-->
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!--==========================================
                    EDUCATION
 ===========================================-->
 <section id="education" class="section">
@@ -639,67 +752,6 @@
 
         </div>
     </div>
-</section>
-
-<!--==========================================
-                   PROJECTS
-===========================================-->
-<section id="projects" class="section">
-    <div class="container">
-        <div class="section-title">
-            <h4 class="text-uppercase text-center"><img src="images/icons/brick.png" alt="demo">Projects</h4>
-        </div>
-
-        <div id="polycube" class="card timeline-content">
-            <div class="card-content">
-                <!-- TIMELINE TITLE -->
-                <h6 class="timeline-title" align="center">Polycube</h6>
-                <p>
-                    <a href="https://github.com/polycube-network/polycube/">Polycube</a> is an open source
-                    software framework that provides fast and lightweight network functions such as bridges,
-                    routers, firewalls, and others implemented using eBPF and XDP Linux kernel technologies.
-                    On top of Polycube we built pcn-iptables, a much more efficient clone of iptables, and pcn-k8s,
-                    a network provider for kubernetes.
-                </p>
-            </div>
-        </div>
-
-        <div id="iovisor-ovn" class="card timeline-content">
-            <div class="card-content">
-                <!-- TIMELINE TITLE -->
-                <h6 class="timeline-title" align="center">IOvisor-ovn</h6>
-                <p>
-                    <a href="https://github.com/iovisor/iovisor-ovn">IOvisor-ovn</a> was an experimental
-                    project that implemented the datapth for the <a href="https://github.com/openvswitch/ovs/">Open Virtual Networking (OVN)</a>
-                    using eBPF.
-                    We built a daemon that read info from the OVN North and SouthBound databases, and based
-                    on that a service topology that used eBPF in the datapath was deployed in the different servers
-                    to provide networking for different hypervisors.
-                </p>
-            </div>
-        </div>
-
-        <div class="card timeline-content">
-            <div class="card-content">
-                <!-- TIMELINE TITLE -->
-                <h6 class="timeline-title" align="center">Squadra Corse</h6>
-                <p>
-                    <a href="https://www.facebook.com/pg/SCPolito/" target="_blank">Squadra Corse</a> is the student racing team from the Polytechnic University of Turin.
-                    Each year a group of students for the different faculties design and build an
-                    electric car to compete against another university teams from all the world at
-                    the <a href="https://en.wikipedia.org/wiki/Formula_SAE" target="_blank">Formula SAE</a>.
-                    I was part of the electronics and control system division, specifically I was the lead
-                    of the team that built a telemetry system for the car.
-                </p>
-                <!--p>
-                    This is a photo of the SCXV presentation:
-                </p-->
-                <!--img src="images/other/squadra_corse.jpg" class="center"-->
-            </div>
-        </div>
-
-    </div>
-
 </section>
 
 
