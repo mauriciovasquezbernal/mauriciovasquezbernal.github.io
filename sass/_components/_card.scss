@@ -6,15 +6,25 @@
 .card {
   /*card layout*/
   position: relative;
-  background-color: $white;
-  transition: box-shadow .25s;
-  -webkit-transition: box-shadow .25s;
-  border-radius: 0 !important;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  border-radius: 16px !important;
   margin: 8px 0;
+  box-shadow: $box-shadow;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: $box-shadow-hover;
+  }
+
   .card-content {
     /*card content*/
     padding: 40px;
-    border-radius: 0 0 2px 2px;
+    border-radius: 16px;
     p {
       /*paragraph style inside card content*/
       margin: 0;

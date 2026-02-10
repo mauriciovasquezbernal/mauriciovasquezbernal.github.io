@@ -18,19 +18,22 @@
     .btn {
       /*button style*/
       margin: 7px 7px;
-      background: $primary-color;
+      background: linear-gradient(135deg, $gradient-start 0%, $gradient-end 100%);
       color: $white;
       width: 180px;
-      border-radius: 2px;
+      border-radius: 30px;
+      padding: 12px 32px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      box-shadow: $box-shadow;
+      transition: all 0.3s ease;
+      border: none;
       &:hover {
        /*hover effect*/
-        background: $primary-color-dark;
+        background: linear-gradient(135deg, $gradient-end 0%, $gradient-start 100%);
+        transform: translateY(-2px);
+        box-shadow: $box-shadow-hover;
       }
     }
   }
 }
-
-
-
-
-

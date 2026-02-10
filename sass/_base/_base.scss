@@ -9,15 +9,21 @@ html, body {
   padding: 0;
   outline: 0;
   display: block;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 15px;
-  background-color: $body-color;
+  background: linear-gradient(to bottom, $body-color 0%, darken($body-color, 3%) 100%);
   color: $font-color-dark;
-  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   -webkit-text-stroke: 1px transparent;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -webkit-overflow-scrolling: touch;
+}
+
+/* Add scroll behavior */
+html {
+  scroll-behavior: smooth;
 }
 
 /*-------------------------------------------------------------------------------
@@ -39,8 +45,14 @@ html, body {
     img {
       width: 66px;
       padding: 10px;
-      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+      box-shadow: $box-shadow-light;
       margin: -2px 12px 12px 12px;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: $box-shadow-hover;
+      }
     }
   }
 }
@@ -77,5 +89,3 @@ html, body {
     width: 1000px;
   }
 }
-
-
