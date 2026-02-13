@@ -905,6 +905,121 @@
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
+
+        /* About/Profile Section Styles */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .about-text {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .about-intro {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: var(--text-dark);
+        }
+
+        .about-intro strong {
+            color: var(--gradient-start);
+        }
+
+        .about-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .about-item {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .about-icon {
+            width: 50px;
+            height: 50px;
+            min-width: 50px;
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.25rem;
+        }
+
+        .about-item-content h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+            color: var(--text-dark);
+        }
+
+        .about-item-content p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .skills-panel {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .skills-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+        }
+
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .skill-tag {
+            padding: 0.5rem 1rem;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--gradient-start);
+            border: 1px solid rgba(102, 126, 234, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .about-intro {
+                font-size: 1rem;
+            }
+
+            .skills-panel {
+                padding: 1.5rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -915,6 +1030,7 @@
             <div class="nav-brand">Mauricio Vásquez-Bernal</div>
             <ul class="nav-menu">
                 <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#talks">Talks</a></li>
@@ -932,11 +1048,7 @@
             <div class="hero-text">
                 <div class="hero-greeting">👋 Hello, I'm</div>
                 <h1 class="hero-title">Mauricio Vásquez-Bernal</h1>
-                <p class="hero-subtitle">Principal Software Engineer</p>
-                <p class="hero-description">
-                    Specializing in eBPF, Kubernetes, and cloud-native technologies at Microsoft.
-                    Building tools that empower developers to debug and introspect complex systems.
-                </p>
+                <p class="hero-subtitle">Principal Software Engineer - Microsoft</p>
                 <div class="hero-buttons">
                     <a href="#contact" class="btn-primary">
                         <span>Get in Touch</span>
@@ -982,6 +1094,80 @@
             <div class="stat-item">
                 <div class="stat-number">20+</div>
                 <div class="stat-label">Talks Given</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About/Profile Section -->
+    <section id="about" class="section section-alternate">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">ABOUT ME</span>
+                <h2 class="section-title">Profile</h2>
+            </div>
+
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-intro">
+                        I'm a passionate software engineer with deep expertise in <strong>eBPF</strong>,
+                        <strong>cloud-native technologies</strong>, and <strong>observability systems</strong>.
+                        My journey in tech has taken me from academic research to leading the development
+                        of cutting-edge open-source projects at Microsoft.
+                    </p>
+
+                    <div class="about-details">
+                        <div class="about-item">
+                            <div class="about-icon">
+                                <i class="fa fa-code"></i>
+                            </div>
+                            <div class="about-item-content">
+                                <h4>Technical Focus</h4>
+                                <p>Specializing in Linux kernel technologies, eBPF programming, Kubernetes,
+                                   and building high-performance networking and observability solutions.</p>
+                            </div>
+                        </div>
+
+                        <div class="about-item">
+                            <div class="about-icon">
+                                <i class="fa fa-heart"></i>
+                            </div>
+                            <div class="about-item-content">
+                                <h4>Open Source Advocate</h4>
+                                <p>Active contributor to the cloud-native ecosystem with contributions to
+                                   OpenTelemetry, Inspektor Gadget, and various CNCF projects.</p>
+                            </div>
+                        </div>
+
+                        <div class="about-item">
+                            <div class="about-icon">
+                                <i class="fa fa-users"></i>
+                            </div>
+                            <div class="about-item-content">
+                                <h4>Community Speaker</h4>
+                                <p>Passionate about sharing knowledge through talks at international
+                                   conferences like KubeCon, eBPF Summit, and community events.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-panel">
+                    <h3 class="skills-title">Core Technologies</h3>
+                    <div class="skills-grid">
+                        <div class="skill-tag">eBPF</div>
+                        <div class="skill-tag">Kubernetes</div>
+                        <div class="skill-tag">Go</div>
+                        <div class="skill-tag">Linux Kernel</div>
+                        <div class="skill-tag">C</div>
+                        <div class="skill-tag">Python</div>
+                        <div class="skill-tag">OpenTelemetry</div>
+                        <div class="skill-tag">Cloud Native</div>
+                        <div class="skill-tag">Docker</div>
+                        <div class="skill-tag">Networking</div>
+                        <div class="skill-tag">Observability</div>
+                        <div class="skill-tag">Azure</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -1174,7 +1360,58 @@
                         inspection on Kubernetes clusters and Linux hosts using
                         eBPF.
                     </p>
+                    <p class="project-description">
+                        I am one of the maintainers of the project and have been leading
+                        its development since 2022.
+                    </p>
                     <a href="https://inspektor-gadget.io/" target="_blank" class="project-link">
+                        Learn more <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- bpftool -->
+                <div class="project-card">
+                    <div class="project-icon" style="background: transparent; box-shadow: none; border-radius: 0;">
+                        <img src="images/logos/bpftool.svg" alt="bpftool" style="width: 48px; height: 48px;">
+                    </div>
+                    <h3 class="project-title">bpftool</h3>
+                    <p class="project-description">
+                        bpftool is the reference utility to quickly inspect and
+                        manage BPF objects on your system, to manipulate BPF
+                        object files, or to perform various other BPF-related
+                        tasks.
+                    </p>
+                        <p class="project-description">
+                        I contributed the <a
+                        href="https://inspektor-gadget.io/blog/2022/03/btfgen-one-step-closer-to-truly-portable-ebpf-programs/"
+                        target="_blank">btfgen</a> tool to allow using CO-RE on
+                        older kernels.
+                    </p>
+                    <a href="https://bpftool.dev/" target="_blank" class="project-link">
+                        Learn more <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- BCC -->
+                <div class="project-card">
+                    <div class="project-icon" style="background: transparent; box-shadow: none; border-radius: 0;">
+                        <img src="images/logos/bcc.svg" alt="BCC" style="width: 48px; height: 48px;">
+                    </div>
+                    <h3 class="project-title">BCC</h3>
+                    <p class="project-description">
+                        BCC is a toolkit for creating efficient kernel tracing
+                        and manipulation programs, and includes several useful
+                        tools and examples. It makes use of extended BPF
+                        (Berkeley Packet Filters), formally known as eBPF.
+                    </p>
+                    <p class="project-description">
+                        I've contributed multiple <a
+                        href="https://github.com/iovisor/bcc/commits?author=mauriciovasquezbernal"
+                        target="_blank">patches</a> to the project over the
+                        years. Ranging from new tools, btfgen integration and
+                        few bug fixes.
+                    </p>
+                    <a href="https://github.com/iovisor/bcc" target="_blank" class="project-link">
                         Learn more <i class="fa fa-arrow-right"></i>
                     </a>
                 </div>
@@ -1189,6 +1426,10 @@
                         High-quality, ubiquitous, and portable telemetry to
                         enable effective observability.
                     </p>
+                    <p class="project-description">
+                        I was involved in the early development of the
+                        opentelemetry-python implementation.
+                    </p>
                     <a href="https://opentelemetry.io/" target="_blank" class="project-link">
                         Learn more <i class="fa fa-arrow-right"></i>
                     </a>
@@ -1201,8 +1442,14 @@
                     </div>
                     <h3 class="project-title">Polycube</h3>
                     <p class="project-description">
-                        Fast and lightweight network functions framework using eBPF and XDP. Built efficient
-                        alternatives like pcn-iptables and pcn-k8s network provider.
+                        Fast and lightweight network functions framework using
+                        eBPF and XDP. Built efficient alternatives like
+                        pcn-iptables and pcn-k8s network provider.
+                    </p>
+                    <p class="project-description">
+                        I was one of the creators and main developers of the
+                        project during my time at the Polytechnic University of
+                        Turin.
                     </p>
                     <a href="https://github.com/polycube-network/polycube/" target="_blank" class="project-link">
                         Learn more <i class="fa fa-arrow-right"></i>
@@ -1219,6 +1466,9 @@
                         Experimental datapath implementation for Open Virtual
                         Networking using eBPF.
                     </p>
+                    <p class="project-description">
+                        I was one of the creators of this experiment.
+                    </p>
                     <a href="https://github.com/iovisor/iovisor-ovn" target="_blank" class="project-link">
                         Learn more <i class="fa fa-arrow-right"></i>
                     </a>
@@ -1232,14 +1482,19 @@
                     <h3 class="project-title">Squadra Corse Polito</h3>
                     <p class="project-description">
                         The Squadra Corse Polito is the Formula SAE racing team
-                        at Polytechnic University of Turin. I led the telemetry
-                        implementation and worked on electronics and control
+                        at Polytechnic University of Turin.
                         systems.
+                    </p>
+                        <p class="project-description">
+                        I led the telemetry implementation and worked on
+                        electronics and control systems.
                     </p>
                     <a href="https://www.facebook.com/SCPolito/" target="_blank" class="project-link">
                         Learn more <i class="fa fa-arrow-right"></i>
                     </a>
                 </div>
+
+
             </div>
         </div>
     </section>
